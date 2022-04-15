@@ -13,7 +13,7 @@ function App() {
   const [food, setFood] = useState("none");
   const [system, setSystem] = useState("skin");
   const [organ, setOrgan] = useState([]);
-  const [detail, setDetail] = useState("Liver");
+  const [detail, setDetail] = useState("none");
 
   const organChange = (e) => {
     console.log(e.target.dataset.key);
@@ -34,6 +34,11 @@ function App() {
           <div class="navTab">
             <Link class="individualTab" to="/">
               Home
+            </Link>
+          </div>
+          <div class="navTab">
+            <Link class="individualTab" to="/skin">
+              Skin
             </Link>
           </div>
           <div class="navTab">
@@ -69,8 +74,9 @@ function App() {
         <div className="bigContainer">
           <div className="anatomy">
             <Routes>
+              <Route path="/skin" element={<div>Home</div>}></Route>
               <Route
-                path="/"
+                path="/skin"
                 element={
                   <Fragment>
                     <div class="system">
