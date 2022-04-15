@@ -74,7 +74,7 @@ function App() {
         <div className="bigContainer">
           <div className="anatomy">
             <Routes>
-              <Route path="/skin" element={<div>Home</div>}></Route>
+              <Route path="/" element={<div>Home</div>}></Route>
               <Route
                 path="/skin"
                 element={
